@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrappy</title>
+    <!-- Google Fonts Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Mise en page générale */
+        body {
+            font-family: 'Roboto', sans-serif; /* Default font */
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
+        }
+
+        header {
+            background-color: #2e8b57; /* Dark green background for header */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            margin-bottom: 10px;
+            font-size: 60px;
+            font-weight: bold;
+            display: inline-block;
+            font-family: 'Pacifico', cursive; /* Stylish font for the brand name */
+            color: #f5f5dc; /* Off-white color for "scrappy" */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section des produits */
+        main {
+            padding: 50px 10%;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .product {
+            background-color: #ffffff; /* Light background for products */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #2e8b57;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #2e8b57; /* Dark green for "Add to Cart" button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27ae60; /* Lighter green on hover */
+        }
+
+        /* Comment Section */
+        .comment {
+            margin-top: 10px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>scrappy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Audio element for the sound effect -->
+    <audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
+
+    <main>
+        <section class="products">
+            <!-- Produit 1: 2 in 1 pants -->
+            <div class="product">
+                <img src="Most confusing pants ever_.jpeg" alt="Produit 1">
+                <h2>2 in 1 pants</h2>
+                <p>Prix : 970,99 dh</p>
+                <button onclick="playSound(); alert('OOO, you pulled up your pants too hard!')">Ajouter au panier</button>
+                <p class="comment"></p>
+            </div>
+
+            <!-- Produit 2: pink t-shirt -->
+            <div class="product">
+                <img src="pink t shirt.jpg" alt="Produit 2">
+                <h2>Pink T-shirt</h2>
+                <p>Prix : 400,99 dh</p>
+                <button onclick="ohohoooh.mp3; alert('Sad fish vibes.')">Ajouter au panier</button>
+                <p class="comment"></p>
+            </div>
+
+            <!-- Produit 3: warm sweater -->
+            <div class="product">
+                <img src="beige.jpg" alt="Produit 3">
+                <h2>Warm Sweater</h2>
+                <p>Prix : 300,99 dh</p>
+                <button onclick="playSound(); alert('Comes with a free game of Fix Your Sweater All Day!')">Ajouter au panier</button>
+                <p class="comment"></p>
+            </div>
+
+            <!-- Produit 4: blue sweater -->
+            <div class="product">
+                <img src="blue.jpg" alt="Produit 4">
+                <h2>Blue Sweater</h2>
+                <p>Prix : 240 dh</p>
+                <button onclick="playSound(); alert('Great for chilly evenings.')">Ajouter au panier</button>
+            </div>
+
+            <!-- Produit 5: Dragon pants -->
+            <div class="product">
+                <img src="pantts.jpg" alt="Produit 5">
+                <h2>Dragon Pants</h2>
+                <p>Prix : 490 dh</p>
+                <button onclick="playSound(); alert('Pants may start fighting with your other clothes.')">Ajouter au panier</button>
+                <p class="comment">.</p>
+            </div>
+
+            <!-- Produit 6: Cool jacket -->
+            <div class="product">
+                <img src="jacket.jpg" alt="Produit 6">
+                <h2>Cool Jacket</h2>
+                <p>Prix : 598 dh</p>
+                <button onclick="playSound(); alert('Stay cool, even in the cold.')">Ajouter au panier</button>
+            </div>
+
+            <!-- Produit 7: Smiley -->
+            <div class="product">
+                <img src="teeth.jpg" alt="Produit 7">
+                <h2>Smiley</h2>
+                <p>Prix : 700 dh</p>
+                <button onclick="playSound(); alert('Finally, a sweater that smiles even when you don’t.')">Ajouter au panier</button>
+                <p class="comment">.</p>
+            </div>
+
+            <!-- Produit 8: Black Sweater -->
+            <div class="product">
+                <img src="blbl.jpg" alt="Produit 8">
+                <h2>Black Sweater</h2>
+                <p>Prix : 500,99 dh</p>
+                <button onclick="playSound(); alert('Simple, classic, and versatile.')">Ajouter au panier</button>
+            </div>
+
+            <!-- Produit 9: Vintage Yellow Jacket -->
+            <div class="product">
+                <img src="uglyy.jpg" alt="Produit 9">
+                <h2>Vintage Yellow Jacket</h2>
+                <p>Prix : 690,99 dh</p>
+                <button onclick="playSound(); alert('Perfect if you want to get promoted at the circus.')">Ajouter au panier</button>
+                <p class="comment">.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Boutique en ligne. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function playSound() {
+            var sound = document.getElementById("click-sound");
+            sound.play();  // Play the sound each time the button is clicked
+        }
+    </script>
+</body>
+</html>
